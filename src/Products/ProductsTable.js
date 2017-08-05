@@ -7,9 +7,7 @@ export default class ProductsTable extends React.Component {
         const rows = []
         for (var key in this.props.products){
             var product = this.props.products[key];
-            console.log(this.props.filterText)
-            console.log(product.Title.TitleText)
-            if (product.Title.TitleText.indexOf(this.props.filterText) === -1) {
+            if (product.Title.TitleText.toLowerCase().indexOf(this.props.filterText.toLowerCase()) === -1) {
                  continue;
             }
             rows.push(<ProductRow product={product} key={key} />);

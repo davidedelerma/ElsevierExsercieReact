@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import ProductsContainer from'./ProductsContainer';
+import ProductsContainer from'./Products/ProductsContainer';
 
 class App extends Component {
   
