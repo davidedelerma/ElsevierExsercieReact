@@ -1,6 +1,7 @@
 import React from 'react';
 import ProductRow from './ProductRow'
 
+
 export default class ProductsTable extends React.Component {
     
     render() {
@@ -10,11 +11,11 @@ export default class ProductsTable extends React.Component {
             if (product.Title.TitleText.toLowerCase().indexOf(this.props.filterText.toLowerCase()) === -1) {
                  continue;
             }
-            rows.push(<ProductRow product={product} key={key} />);
+            rows.push(<ProductRow onClickTable={this.props.onClickTable} product={product} key={key} />);
         };
         
         return (
-            <table>
+            <table style={{display:"inline"}} >
                 <thead>
                 <tr>
                     <th>Title</th>

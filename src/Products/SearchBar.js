@@ -1,4 +1,5 @@
 import React from 'react';
+import {FormControl} from 'react-bootstrap'
 
 export default class SearchBar extends React.Component {
     constructor(props) {
@@ -10,11 +11,12 @@ export default class SearchBar extends React.Component {
     }
     render() {
     return (
-      <form>
-        <input 
+      <form >
+        <FormControl 
             type="text" 
             placeholder="Search..."
             value={this.props.filterText}
+            bsSize="small"
             onChange={this.handleFilterTextInputChange} 
         />
       </form>

@@ -2,14 +2,20 @@ import React from 'react';
 
 
 export default class ProductRow extends React.Component {
-    handleClick(){
-        console.log("Clicked")
+    constructor(props) {
+      super(props);
+      this.handleOnCLickTextChange = this.handleOnCLickTextChange.bind(this);
+    }
+    
+    handleOnCLickTextChange(e) {
+      e.preventDefault();
+      this.props.onClickTable(this.props.product);
     }
 
     render() {
     var name = this.props.product.Title.TitleText
     return (
-      <tr onClick={this.handleClick}>
+      <tr onClick={this.handleOnCLickTextChange}>
         <td>{name}</td>      
      </tr>
     );
