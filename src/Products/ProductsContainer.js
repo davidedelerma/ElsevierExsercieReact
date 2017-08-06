@@ -41,8 +41,7 @@ export default class ProductsContainer extends React.Component{
                             <ProductsTable 
                                 filterText={this.state.filterText}
                                 products={this.state.products.worksById}
-                                onClickTable={this.handleClick} 
- 
+                                onClickTable={this.handleClick}
                             />
                         </Col>
                         <Col md={6} mdPull={6} >

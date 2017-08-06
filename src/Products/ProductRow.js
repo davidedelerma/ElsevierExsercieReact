@@ -4,10 +4,10 @@ import React from 'react';
 export default class ProductRow extends React.Component {
     constructor(props) {
       super(props);
-      this.handleOnCLickTextChange = this.handleOnCLickTextChange.bind(this);
+      this.handleOnCLick = this.handleOnCLick.bind(this);
     }
     
-    handleOnCLickTextChange(e) {
+    handleOnCLick(e) {
       e.preventDefault();
       this.props.onClickTable(this.props.product);
     }
@@ -15,7 +15,7 @@ export default class ProductRow extends React.Component {
     render() {
     var name = this.props.product.Title.TitleText.toUpperCase()
     return (
-      <tr onClick={this.handleOnCLickTextChange}>
+      <tr onClick={this.handleOnCLick} style={{cursor:'pointer'}}>
         <td>{name}</td>      
      </tr>
     );
