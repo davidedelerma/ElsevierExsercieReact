@@ -15,10 +15,10 @@ export default class ProductsTable extends React.Component {
         };
         
         return (
-            <table style={{display:"inline"}} >
+            <table >
                 <thead>
                 <tr>
-                    <th>Title</th>
+                    <th>Books: </th>
                 </tr>
                 </thead>
                 <tbody>{rows}</tbody>

@@ -32,14 +32,12 @@ export default class ProductsContainer extends React.Component{
     render() {
         return (
                 <Grid >
-                    <Row>
-                    <SearchBar 
-                            filterText={this.state.filterText}
-                            onFilterTextInput={this.handleFilterTextInput}
-                            />
-                    </Row>
-                    <Row >
-                        <Col md={6} >                           
+                    <Row className="show-grid">
+                       <Col md={6} mdPush={6} >
+                            <SearchBar 
+                                filterText={this.state.filterText}
+                                onFilterTextInput={this.handleFilterTextInput}
+                            />                           
                             <ProductsTable 
                                 filterText={this.state.filterText}
                                 products={this.state.products.worksById}
@@ -47,11 +45,12 @@ export default class ProductsContainer extends React.Component{
  
                             />
                         </Col>
-                        <Col md={4}  >
+                        <Col md={6} mdPull={6} >
                             <ProductDetail 
                                 selectedProduct={this.state.product}
                             />
                         </Col>
+
                     </Row>
                 </Grid>
         )
