@@ -13,7 +13,7 @@ export default class ProductRow extends React.Component {
     }
 
     render() {
-    var name = this.props.product.Title.TitleText
+    var name = this.props.product.Title.TitleText.toUpperCase()
     return (
       <tr onClick={this.handleOnCLickTextChange}>
         <td>{name}</td>      

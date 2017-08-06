@@ -4,7 +4,7 @@ export default class Contributors extends React.Component {
     
     render() {
         return (
-            <li>{this.props.contributorToShow}</li>
+            <li>{this.props.contributorToShow.NamesBeforeKey} {this.props.contributorToShow.KeyNames}</li>
         )
     }
 }   
